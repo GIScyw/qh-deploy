@@ -1,4 +1,4 @@
-# ZEPLOY
+# qh-deploy
 
 > Automated deployment tool
 
