@@ -1,15 +1,15 @@
 {
   "name": "qh-deploy",
   "description": "automatic deploy",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "author": "giscyw <giscyw@outlook.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GIScyw/qh-deploy"
+    "url": "git+https://github.com/GIScyw/qh-deploy.git"
   },
   "bin": {
-    "zeploy": "bin/qh-deploy"
+    "deploy": "bin/qh-deploy"
   },
   "keywords": [
     "deploy"
@@ -20,5 +20,16 @@
     "ora": "^3.0.0",
     "read": "^1.0.7",
     "ssh2": "^0.6.1"
+  },
+  "bugs": {
+    "url": "https://github.com/GIScyw/qh-deploy/issues"
+  },
+  "homepage": "https://github.com/GIScyw/qh-deploy#readme",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

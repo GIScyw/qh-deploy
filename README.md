@@ -1,48 +1,26 @@
 # qh-deploy
 
-> Automated deployment tool
+> 自动部署工具
 
-## Installation and Usage
+## 安装
 
-### Local
-
-#### Installation
+### 局部安装
 
 ```bash
-npm install qh-deploy --D
-```
-or
-```bash
-yarn add qh-deploy -D
+npm install qh-deploy --D 或者 yarn add qh-deploy -D
 ```
 
-#### config
-create an environment configuration:
+### 全局安装
 
 ```bash
-./node_modules/.bin/qh-deploy config production
+npm install -g qh-deploy 或者 yarn global add qh-deploy
 ```
 
-### Global
-
-#### Installation
-```bash
-npm install -g qh-deploy
-```
-or
-```bash
-yarn global add qh-deploy
-```
-#### config
-create an environment configuration:
+## 配置
 
 ```bash
 qh-deploy config production
 ```
-
-## Configuration
-
-edit `.zeployrc` in root directory:
 
 ```json
 {
@@ -52,55 +30,14 @@ edit `.zeployrc` in root directory:
       "username": "root",
       "password": "123456"
     },
-    "distPath": "dist", // relative path
-    "targetPath": "/project/project-name", // absolute path
-    "keepReleases": "10" // Save the number of published versions(default 10)
+    "distPath": "dist", // 相对路径
+    "targetPath": "/project/project-name", // 绝对路径
+    "keepReleases": "10" // 保存已发布版本的数量(默认为10)
   }
 }
 ```
 
-then deploy your project:
+## 部署
 ```bash
 qh-deploy publish production
 ```
-
-result:
-
-```
-// your distPath
-dist
-- index.html
-- static
-  - css
-    - app.css
-  - img
-  - js
-    - 0.js
-    - 1.js
-    - 2.js
-    - app.js
-    - vendor.js
-    - manifest.js
-```
-
-```
-// your targetPath
-project
-  - project-name
-    - releases
-    - dist
-      - index.html
-      - static
-        - css
-          - app.css
-        - img
-        - js
-          - 0.js
-          - 1.js
-          - 2.js
-          - app.js
-          - vendor.js
-          - manifest.js
-```
-
-
