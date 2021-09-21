@@ -19,7 +19,7 @@
     "commander": "^2.18.0",
     "ora": "^3.0.0",
     "read": "^1.0.7",
-    "ssh2": "^0.6.1"
+    "ssh2": "^1.4.0"
   },
   "bugs": {
     "url": "https://github.com/GIScyw/qh-deploy/issues"
